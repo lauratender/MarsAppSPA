@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CountClickContext } from './AppContent';
 
 function MarsPicturesContainer() {
+    const countContext = useContext(CountClickContext);
+
     return (
-        <div> Here will go the pictures ... 
-        </div>
+        <p>You clicked {countContext.count} times</p>
     );
 }
 

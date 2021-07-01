@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { CountClickContext } from './AppContent';
 
 export function CountClicks() {
-
-    const [count, setCount] = useState(0); 
-
-    useEffect(() => {
-        const countValue: string = localStorage.getItem("clickCount") || "0";
-        const count: number = parseInt(countValue);
-        setCount(count);
-    }, []);
-
-    function editCount(count: number){
-        localStorage.setItem("clickCount", (count + 1).toString());
-        setCount(count + 1);
-    }
-
+    const countContext = useContext(CountClickContext);
     return (
         <div>
-            <p>You clicked {count} times</p> 
-            <button onClick={() => editCount(count)}>
+            <button onClick={() => countContext.editCount(countContext.count)}>
                 Click me!
             </button> 
         </div>
