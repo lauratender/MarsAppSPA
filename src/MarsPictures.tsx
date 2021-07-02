@@ -4,7 +4,9 @@ import MarsPicturesContainer from './MarsPicturesContainer';
 function MarsPictures() {
     return (
         <div>
-            <p>Pictures taken on Mars on sol 1000.</p>
+            <p>
+                Pictures taken on Mars on sol 1000.
+            </p>
             <MarsPicturesContainer/>
         </div>
     );

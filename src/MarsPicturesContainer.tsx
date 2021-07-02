@@ -5,7 +5,9 @@ function MarsPicturesContainer() {
     const countContext = useContext(CountClickContext);
 
     return (
-        <p>You clicked {countContext.count} times</p>
+        <p>
+            You clicked {countContext.count} times.
+        </p>
     );
 }
 

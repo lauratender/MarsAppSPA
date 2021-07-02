@@ -5,8 +5,10 @@ const introPicUrl: string = "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/re
 
 function IntroNasa() {
     return (
-      <div className="IntroNasa">
-            <h2>Mars App NASA</h2>
+        <div className="IntroNasa">
+            <h2>
+                Mars App NASA
+            </h2>
             <p>
                 NASA shows different images taken on Mars and provides an excellent set of APIs which allow developers
                 to get live data about many things and use them in their applications. 
@@ -15,7 +17,7 @@ function IntroNasa() {
                 This application, given rover and a camera type, shows images taken by the rover with that camera type.
             </p>
             <img src={introPicUrl} className="IntroNasaImg" alt="Mars" />
-      </div>
+        </div>
     );
 }
 
