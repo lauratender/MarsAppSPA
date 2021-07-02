@@ -1,28 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import IntroNasa from './IntroNasa';
+import AppContent from './AppContent';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edited <code>src/App.tsx</code>.
-        </p>
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div className="App-header">
+              <nav>
+                  <ul>
+                      <li>
+                          <Link to="/about">About</Link>
+                      </li>
+                      <li>
+                          <Link to="/button">Button Click Counter</Link>
+                      </li>
+                  </ul>
+              </nav>
+              <Switch>
+                  <Route path="/about">
+                      <IntroNasa/>
+                  </Route>
+                  <Route path="/button">
+                      <AppContent/>
+                  </Route>
+              </Switch>
+          </div>
+      </Router>
   );
 }
 
